@@ -1,0 +1,57 @@
+
+.login-section{
+  background-image: url('https://codetheweb.blog/assets/img/posts/css-advanced-background-images/mountains.jpg');
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.input-field{
+  height: 20px;
+  margin: 5px;
+}
+
+.login-button{
+  background: #EFEFBB;
+  background: -moz-linear-gradient(left, #EFEFBB 0%, #D4D3DD 100%);
+  background: -webkit-linear-gradient(left, #EFEFBB 0%, #D4D3DD 100%);
+  background: linear-gradient(to right, #EFEFBB 0%, #D4D3DD 100%);
+  color: #200505;
+  text-shadow: 0px 0px 20px rgba(0,0,0,0.42);
+  margin-top: 10px;
+  padding: 20px 0;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  opacity: 0.9;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.login-button:hover{
+  opacity: 1;
+}
+
+.form-heading{
+  text-align: center;
+  font-size: 30px;
+  color: silver;
+  text-shadow: 3px 6px 12px rgba(0,0,0,0.78);
+}
+
+.login-form{
+  background-color: rgba($color: #502219, $alpha: 0.3);
+  color: white;
+  min-width: 300px;
+  height: fit-content;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: inset;
+  //text-align: center;
+  //font-size: 30px;
+}

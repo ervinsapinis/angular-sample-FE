@@ -1,0 +1,33 @@
+<section class="planner-section">
+  <div class="planner-wrapper">
+    <div class="planner-action-wrapper">
+      <input class="task-input"
+       (keyup.enter)="addTask()"
+       [(ngModel)]="taskInputValue"
+       type="text"
+       placeholder="Write your task here...">
+      <button class="button-83" (click)="addTask()">Add</button>
+    </div>
+    <div class="task-button-wrapper">
+      <button class="button-83" (click)="setSelectedFilterType(filterOptions.Pending)">Pending tasks</button>
+      <button class="button-83" (click)="setSelectedFilterType(filterOptions.Done)">Done tasks</button>
+      <button class="button-83" (click)="setSelectedFilterType(filterOptions.All)">All tasks</button>
+    </div>
+
+    <div *ngFor="let task of visibleTasks; let i = index" class="planner-task">
+      <div class="task-check">
+        <div>
+          <input class="planner-checkbox" [(ngModel)]="task.done" type="checkbox" (ngModelChange)="setPendingTaskCount()">
+        </div>
+        <p [ngClass]="{'task-done': task.done}"> {{ task.description }}</p>
+      </div>
+      <div>
+        <button class="btn-del" (click)="deleteTask(i)">x</button></div>
+    </div>
+
+    <div *ngIf="plannerTasks.length > 0" class="planner-footer">
+      <span>You have {{ pendingTaskCount }} pending tasks</span>
+      <button class="button-83" (click)="clearAllTasks()">Clear All Tasks</button>
+    </div>
+  </div>
+</section>
