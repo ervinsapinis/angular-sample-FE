@@ -9,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class CatFactsComponent implements OnInit {
   facts$?: any;
 
-  constructor(private CatFactService: CatFactService) { }
+  constructor(private CatFactService: CatFactService) {
+    
+   }
 
   ngOnInit(): void {
     this.facts$ = this.CatFactService.getCatFacts();
